@@ -14,5 +14,8 @@ class FibonacciTest < Test::Unit::TestCase
     should "return 1" do
       assert_equal 1, @fib.number(1)
     end
+    should "return 1" do
+      assert_equal 1, @fib.number(2)
+    end
   end
 end
