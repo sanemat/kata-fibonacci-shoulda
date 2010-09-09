@@ -1,8 +1,13 @@
 class Fibonacci
+  def initialize
+    @stored = {}
+  end
   def number(input)
-    if input == 0 then return 0
-    elsif input == 1 then return 1
+    unless @stored[input].nil? then return @stored[input] end
+    if input == 0 then @stored[input] = 0
+    elsif input == 1 then @stored[input] = 1
+    else @stored[input] = number(input - 2) + number(input - 1)
     end
-    number(input - 2) + number(input - 1)
+    @stored[input]
   end
 end

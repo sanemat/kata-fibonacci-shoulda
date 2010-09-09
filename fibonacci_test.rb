@@ -23,5 +23,8 @@ class FibonacciTest < Test::Unit::TestCase
     should "input 10 return 55" do
       assert_equal 55, @fib.number(10)
     end
+    should "input 100 return 354..." do
+      assert_equal 354224848179261915075, @fib.number(100)
+    end
   end
 end
