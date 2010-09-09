@@ -17,5 +17,8 @@ class FibonacciTest < Test::Unit::TestCase
     should "input 2 return 1" do
       assert_equal 1, @fib.number(2)
     end
+    should "input 3 return 2" do
+      assert_equal 2, @fib.number(3)
+    end
   end
 end
