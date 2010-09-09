@@ -8,13 +8,13 @@ class FibonacciTest < Test::Unit::TestCase
       @fib = Fibonacci.new
     end
 
-    should "return 0" do
+    should "input 0 return 0" do
       assert_equal 0, @fib.number(0)
     end
-    should "return 1" do
+    should "input 1 return 1" do
       assert_equal 1, @fib.number(1)
     end
-    should "return 1" do
+    should "input 2 return 1" do
       assert_equal 1, @fib.number(2)
     end
   end
