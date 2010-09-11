@@ -1,14 +1,12 @@
 # coding: utf-8
+require 'active_support/memoizable'
 class Fibonacci
-  def initialize
-    @stored = {}
-  end
+  extend ActiveSupport::Memoizable
   def number(input)
-    unless @stored[input].nil? then return @stored[input] end
-    if input == 0 then @stored[input] = 0
-    elsif input == 1 then @stored[input] = 1
-    else @stored[input] = number(input - 2) + number(input - 1)
+    if input == 0 then 0
+    elsif input == 1 then 1
+    else number(input - 2) + number(input - 1)
     end
-    @stored[input]
   end
+  memoize :number
 end
